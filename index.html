@@ -75,6 +75,14 @@ h2{font-size:clamp(30px,4vw,44px);line-height:1.1;letter-spacing:-.8px;margin:10
 .plan h3{margin:0;font-size:24px}.plan .pr{color:var(--muted);margin:4px 0 16px;font-size:15px}
 .plan ul{list-style:none;padding:0;margin:0}.plan li{padding:7px 0 7px 28px;position:relative;font-size:15.5px;border-top:1px solid var(--line)}
 .plan li:first-child{border-top:none}
+.price{display:flex;align-items:baseline;gap:4px;margin:6px 0 2px}.price b{font-size:38px;line-height:1.1;letter-spacing:-.5px}.price span{color:var(--muted);font-size:16px;font-weight:600}
+.plan .pr strong{color:var(--text)}
+.incl{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px 26px;margin-top:16px;max-width:860px}
+.incl h3{margin:0 0 8px;font-size:17px}
+.incl ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
+.incl li{padding:7px 0 7px 28px;position:relative;font-size:15.5px;border-top:1px solid var(--line)}
+.incl li:nth-child(-n+2){border-top:none}
+.incl li:before{content:"";position:absolute;left:2px;top:13px;width:14px;height:8px;border-left:2.5px solid var(--g);border-bottom:2.5px solid var(--g);transform:rotate(-45deg)}
 .plan li:before{content:"";position:absolute;left:2px;top:13px;width:14px;height:8px;border-left:2.5px solid var(--g);border-bottom:2.5px solid var(--g);transform:rotate(-45deg)}
 .priv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .faq details{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 20px;margin:10px 0;max-width:820px}
@@ -101,7 +109,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}footer nav a{color:var(--mut
   .hero{grid-template-columns:1fr;padding-top:40px;text-align:left}
   .phones{height:470px;transform:scale(.86);transform-origin:top center;margin-bottom:-60px}
   .p1{left:calc(50% - 250px)}.p2{right:calc(50% - 250px)}
-  .grid,.steps,.priv{grid-template-columns:1fr}.plans{grid-template-columns:1fr}
+  .grid,.steps,.priv{grid-template-columns:1fr}.plans{grid-template-columns:1fr}.incl ul{grid-template-columns:1fr}.incl li:nth-child(2){border-top:1px solid var(--line)}
   section{padding:50px 0}
 }
 @media (max-width:420px){.phones{transform:scale(.72);margin-bottom:-140px}}
@@ -110,7 +118,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}footer nav a{color:var(--mut
 
 <header class="top"><div class="wrap">
   <a class="brand" href="#"><span class="logo"><svg width="24" height="24" viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M12 50C28 27 72 27 88 50C72 73 28 73 12 50Z" stroke-width="7"/><circle cx="50" cy="50" r="17" stroke-width="6.5"/><path d="M43.5 57V43l13 14V43" stroke-width="5.5"/><path d="M76 22C76.7 26.2 77.8 27.3 82 28C77.8 28.7 76.7 29.8 76 34C75.3 29.8 74.2 28.7 70 28C74.2 27.3 75.3 26.2 76 22Z" fill="#fff" stroke="none"/></svg></span>Nutryse AI</a>
-  <nav class="links"><a href="#funzioni">Funzioni</a><a href="#app">L'app</a><a href="#come">Come funziona</a><a href="#piani">Piani</a><a href="#faq">Domande</a></nav>
+  <nav class="links"><a href="#funzioni">Funzioni</a><a href="#app">L'app</a><a href="#come">Come funziona</a><a href="#piani">Prezzi</a><a href="#faq">Domande</a></nav>
   <a class="btn" href="#scarica">Scarica l'app</a>
 </div></header>
 
@@ -121,7 +129,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}footer nav a{color:var(--mut
       <h1>Fotografa il piatto.<br><span class="grad">Calorie e macro</span> in un attimo.</h1>
       <p class="lead">Nutryse AI riconosce il cibo dalla foto e calcola calorie, proteine, carboidrati e grassi. Tu controlli, correggi se serve e salvi: il diario si tiene da solo.</p>
       <div class="ctas"><a class="btn" href="#scarica"> Presto su App Store</a><a class="btn ghost" href="#funzioni">Scopri le funzioni</a></div>
-      <p class="note">Per iPhone · In italiano · Prova Pro gratis</p>
+      <p class="note">Per iPhone · In italiano · 7 giorni gratis</p>
     </div>
     <div class="phones" aria-hidden="true">
       <div class="phone p1"><div class="s"><div class="island"></div>
@@ -168,7 +176,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}footer nav a{color:var(--mut
     <div class="grid">
       <div class="f"><div class="ic" style="background:linear-gradient(#5CC8F7,#1683BE)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16"/><circle cx="12" cy="12" r="3" fill="#fff"/></svg></div><h3>Foto con AI</h3><p>Inquadra il piatto: l'AI riconosce gli ingredienti e stima grammi, calorie e macro. Puoi correggere ogni numero.</p></div>
       <div class="f"><div class="ic" style="background:linear-gradient(#FFB347,#E06A00)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M5 6v12M8 6v12M11 6v12M15 6v12M18 6v12"/></svg></div><h3>Codice a barre</h3><p>Scansiona i prodotti confezionati e trovi subito i valori nutrizionali dell'etichetta.</p></div>
-      <div class="f"><div class="ic" style="background:linear-gradient(#C77DFF,#8E3BBF)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></div><h3>Cerca o registra</h3><p>Oltre 200 alimenti comuni con porzioni pronte, prodotti di marca, oppure inserisci tu i valori. Gratis.</p></div>
+      <div class="f"><div class="ic" style="background:linear-gradient(#C77DFF,#8E3BBF)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></div><h3>Cerca o registra</h3><p>Oltre 200 alimenti comuni con porzioni pronte, prodotti di marca, oppure inserisci tu i valori.</p></div>
       <div class="f"><div class="ic" style="background:linear-gradient(#5CC8F7,#2AABEE)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg></div><h3>Assistente</h3><p>Chiedi cosa mangiare stasera, come arrivare alle proteine di oggi o un'idea di spuntino che rientri nei tuoi numeri.</p></div>
       <div class="f"><div class="ic" style="background:linear-gradient(#5BE584,#1E9E40)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l5-5 4 3 7-8"/></svg></div><h3>Progressi e peso</h3><p>Grafico del peso, variazioni della settimana e del mese e un calendario che mostra i giorni centrati.</p></div>
       <div class="f"><div class="ic" style="background:linear-gradient(#FF6B8A,#E0245E)"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2z"/></svg></div><h3>Apple Salute e widget</h3><p>Passi, calorie bruciate e peso da Apple Salute. Widget per Home e schermata di blocco, anche nel tuo colore.</p></div>
@@ -247,16 +255,29 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}footer nav a{color:var(--mut
   </section>
 
   <section id="piani">
-    <div class="kicker">Piani</div>
-    <h2>Inizia gratis.<br>Passa a Pro quando vuoi.</h2>
-    <p class="sub">Puoi provare Pro gratis prima di decidere e annullare quando vuoi dalle impostazioni dell'App Store.</p>
+    <div class="kicker">Prezzi</div>
+    <h2>Prova tutto gratis per 7 giorni.</h2>
+    <p class="sub">Un solo abbonamento, tutto incluso. Se annulli prima della fine della prova non paghi nulla: lo fai in due tocchi dalle impostazioni dell'App Store.</p>
     <div class="plans">
-      <div class="plan"><h3>Gratis</h3><div class="pr">Per sempre</div><ul>
-        <li>Cerca alimenti e registra a mano</li><li>Codice a barre</li><li>2 messaggi al giorno all'assistente</li><li>Storico degli ultimi 5 giorni</li><li>Widget e Apple Salute</li></ul></div>
-      <div class="plan pro"><span class="tag">Consigliato</span><h3>Pro</h3><div class="pr">Mensile o annuale · prova gratuita</div><ul>
-        <li>Foto con AI: 20 al giorno</li><li>Assistente: fino a 150 messaggi al giorno</li><li>Storico completo e progressi</li><li>Cibi ricordati: rifotografarli è gratis</li><li>Tutto quello del piano gratuito</li></ul></div>
+      <div class="plan pro"><span class="tag">Più conveniente · risparmi 44%</span><h3>Annuale</h3>
+        <div class="price"><b>39,99 €</b><span>/anno</span></div>
+        <div class="pr">Solo 3,33 € al mese · <strong>7 giorni gratis</strong></div></div>
+      <div class="plan"><h3>Mensile</h3>
+        <div class="price"><b>5,99 €</b><span>/mese</span></div>
+        <div class="pr">Senza vincoli · annulli quando vuoi</div></div>
     </div>
-    <p class="note">Senza Pro puoi usare l'AI anche con i pacchetti di foto. Prezzi aggiornati nell'app.</p>
+    <div class="incl">
+      <h3>Tutto incluso, in entrambi i piani</h3>
+      <ul>
+        <li>Foto con AI di piatti ed etichette: 20 al giorno</li>
+        <li>Assistente personale: fino a 150 messaggi al giorno</li>
+        <li>Cerca alimenti, codice a barre e diario</li>
+        <li>Storico completo e progressi del peso</li>
+        <li>Cibi ricordati: rifotografarli non consuma scansioni</li>
+        <li>Widget, Apple Salute e lista della spesa</li>
+      </ul>
+    </div>
+    <p class="note">Prezzi per l'Italia, IVA inclusa: il prezzo esatto è sempre quello mostrato nell'App Store prima dell'acquisto. Ti servono più foto in un giorno? Con Pro puoi aggiungere 30 scansioni extra a 2,99 €, senza scadenza.</p>
   </section>
 
   <section id="privacy">
@@ -276,7 +297,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}footer nav a{color:var(--mut
     <details><summary>Quanto è preciso il calcolo dalla foto?</summary><p>L'AI stima porzioni e ingredienti da quello che vede: per piatti semplici è molto vicina al reale, per quelli complessi conviene controllare i grammi. Ogni numero si può correggere, e l'app ricorda le tue correzioni.</p></details>
     <details><summary>Serve un account?</summary><p>Puoi accedere con Apple, Google o email. Ci serve per la prova di Pro e per proteggere il servizio di analisi; il diario resta sul tuo iPhone.</p></details>
     <details><summary>Funziona con Apple Salute?</summary><p>Sì, se lo autorizzi: Nutryse scrive pasti, acqua e peso in Salute e legge peso, passi e calorie bruciate.</p></details>
-    <details><summary>Posso usarla senza pagare?</summary><p>Sì. Con il piano gratuito registri i pasti cercando gli alimenti, con il codice a barre o a mano. Le foto con l'AI sono comprese in Pro o nei pacchetti.</p></details>
+    <details><summary>Quanto costa?</summary><p>Nutryse AI Pro costa 39,99 € all'anno (3,33 € al mese) oppure 5,99 € al mese. Con l'annuale i primi 7 giorni sono gratis: se annulli prima della fine della prova non paghi nulla. Senza abbonamento puoi aprire l'app e vedere com'è fatta, ma le funzioni sono bloccate.</p></details>
     <details><summary>È un'app medica?</summary><p>No. Nutryse AI è uno strumento di benessere e non sostituisce il parere di un medico o di un nutrizionista.</p></details>
   </section>
 
