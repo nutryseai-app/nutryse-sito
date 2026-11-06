@@ -77,8 +77,15 @@ h2{font-size:clamp(30px,4vw,44px);line-height:1.1;letter-spacing:-.8px;margin:10
 .plan li:first-child{border-top:none}
 .price{display:flex;align-items:baseline;gap:4px;margin:6px 0 2px}.price b{font-size:38px;line-height:1.1;letter-spacing:-.5px}.price span{color:var(--muted);font-size:16px;font-weight:600}
 .plan .pr strong{color:var(--text)}
-.pass{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px 22px;margin-top:16px;max-width:860px;font-size:15.5px}
-.pass .pp{display:flex;gap:10px;flex-wrap:wrap}.pass .pp span{border:1px solid var(--line);border-radius:99px;padding:7px 14px;white-space:nowrap}
+.pass{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px 26px;margin-top:16px;max-width:860px}
+.pass h3{margin:0;font-size:19px}
+.pass-sub{color:var(--muted);font-size:15.5px;margin:6px 0 16px;max-width:640px}
+.pass-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pass-card{border:1px solid var(--line);border-radius:18px;padding:14px 16px}
+.pass-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.pass-top b{font-size:16.5px}.pass-top span{font-size:20px;font-weight:800;white-space:nowrap}
+.pass-card p{margin:6px 0 0;color:var(--muted);font-size:14.5px;line-height:1.45}
+.pass-note{color:var(--muted);font-size:13.5px;margin:12px 0 0}
 .incl{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px 26px;margin-top:16px;max-width:860px}
 .incl h3{margin:0 0 8px;font-size:17px}
 .incl ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
@@ -111,7 +118,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}footer nav a{color:var(--mut
   .hero{grid-template-columns:1fr;padding-top:40px;text-align:left}
   .phones{height:470px;transform:scale(.86);transform-origin:top center;margin-bottom:-60px}
   .p1{left:calc(50% - 250px)}.p2{right:calc(50% - 250px)}
-  .grid,.steps,.priv{grid-template-columns:1fr}.plans{grid-template-columns:1fr}.incl ul{grid-template-columns:1fr}.incl li:nth-child(2){border-top:1px solid var(--line)}
+  .grid,.steps,.priv{grid-template-columns:1fr}.plans{grid-template-columns:1fr}.pass-grid{grid-template-columns:1fr}.pass{padding:20px}.incl ul{grid-template-columns:1fr}.incl li:nth-child(2){border-top:1px solid var(--line)}
   section{padding:50px 0}
 }
 @media (max-width:420px){.phones{transform:scale(.72);margin-bottom:-140px}}
@@ -269,8 +276,19 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}footer nav a{color:var(--mut
         <div class="pr">Senza vincoli · annulli quando vuoi</div></div>
     </div>
     <div class="pass">
-      <div><b>Senza abbonamento?</b> Compri un pass: tutto Pro dal momento dell'acquisto, poi finisce da solo.</div>
-      <div class="pp"><span><b>Pass 24 ore</b> 0,99 €</span><span><b>Pass 7 giorni</b> 3,99 €</span></div>
+      <h3>Non vuoi abbonarti? Prendi un pass.</h3>
+      <p class="pass-sub">Paghi una volta sola e hai tutto Pro dal momento dell'acquisto. Quando il tempo finisce, il pass si chiude da solo: niente rinnovi automatici e niente da annullare.</p>
+      <div class="pass-grid">
+        <div class="pass-card">
+          <div class="pass-top"><b>Pass 24 ore</b><span>0,99 €</span></div>
+          <p>Un giorno intero, contato all'ora: se lo compri alle 15:00 vale fino alle 15:00 del giorno dopo.</p>
+        </div>
+        <div class="pass-card">
+          <div class="pass-top"><b>Pass 7 giorni</b><span>3,99 €</span></div>
+          <p>Una settimana intera per usare tutto con calma, senza impegni e senza abbonamento.</p>
+        </div>
+      </div>
+      <p class="pass-note">Se compri un pass mentre un altro è ancora attivo, il tempo si somma. Lo ritrovi su tutti i tuoi dispositivi con lo stesso ID Apple.</p>
     </div>
     <div class="incl">
       <h3>Tutto incluso, nei piani e nei pass</h3>
