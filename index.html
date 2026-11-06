@@ -77,6 +77,8 @@ h2{font-size:clamp(30px,4vw,44px);line-height:1.1;letter-spacing:-.8px;margin:10
 .plan li:first-child{border-top:none}
 .price{display:flex;align-items:baseline;gap:4px;margin:6px 0 2px}.price b{font-size:38px;line-height:1.1;letter-spacing:-.5px}.price span{color:var(--muted);font-size:16px;font-weight:600}
 .plan .pr strong{color:var(--text)}
+.pass{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px 22px;margin-top:16px;max-width:860px;font-size:15.5px}
+.pass .pp{display:flex;gap:10px;flex-wrap:wrap}.pass .pp span{border:1px solid var(--line);border-radius:99px;padding:7px 14px;white-space:nowrap}
 .incl{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:22px 26px;margin-top:16px;max-width:860px}
 .incl h3{margin:0 0 8px;font-size:17px}
 .incl ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
@@ -266,18 +268,22 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}footer nav a{color:var(--mut
         <div class="price"><b>5,99 €</b><span>/mese</span></div>
         <div class="pr">Senza vincoli · annulli quando vuoi</div></div>
     </div>
+    <div class="pass">
+      <div><b>Senza abbonamento?</b> Compri un pass: tutto Pro dal momento dell'acquisto, poi finisce da solo.</div>
+      <div class="pp"><span><b>Pass 24 ore</b> 0,99 €</span><span><b>Pass 7 giorni</b> 2,99 €</span></div>
+    </div>
     <div class="incl">
-      <h3>Tutto incluso, in entrambi i piani</h3>
+      <h3>Tutto incluso, nei piani e nei pass</h3>
       <ul>
-        <li>Foto con AI di piatti ed etichette: 20 al giorno</li>
-        <li>Assistente personale: fino a 150 messaggi al giorno</li>
+        <li>Foto con AI di piatti ed etichette</li>
+        <li>Assistente personale per ricette e domande</li>
         <li>Cerca alimenti, codice a barre e diario</li>
         <li>Storico completo e progressi del peso</li>
         <li>Cibi ricordati: rifotografarli non consuma scansioni</li>
         <li>Widget, Apple Salute e lista della spesa</li>
       </ul>
     </div>
-    <p class="note">Prezzi per l'Italia, IVA inclusa: il prezzo esatto è sempre quello mostrato nell'App Store prima dell'acquisto. Ti servono più foto in un giorno? Con Pro puoi aggiungere 30 scansioni extra a 2,99 €, senza scadenza.</p>
+    <p class="note">Prezzi per l'Italia, IVA inclusa: il prezzo esatto è sempre quello mostrato nell'App Store prima dell'acquisto. Ti servono più foto in un giorno? Con Pro puoi aggiungere 30 scansioni extra a 2,99 €, valide 48 ore.</p>
   </section>
 
   <section id="privacy">
@@ -297,7 +303,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}footer nav a{color:var(--mut
     <details><summary>Quanto è preciso il calcolo dalla foto?</summary><p>L'AI stima porzioni e ingredienti da quello che vede: per piatti semplici è molto vicina al reale, per quelli complessi conviene controllare i grammi. Ogni numero si può correggere, e l'app ricorda le tue correzioni.</p></details>
     <details><summary>Serve un account?</summary><p>Puoi accedere con Apple, Google o email. Ci serve per la prova di Pro e per proteggere il servizio di analisi; il diario resta sul tuo iPhone.</p></details>
     <details><summary>Funziona con Apple Salute?</summary><p>Sì, se lo autorizzi: Nutryse scrive pasti, acqua e peso in Salute e legge peso, passi e calorie bruciate.</p></details>
-    <details><summary>Quanto costa?</summary><p>Nutryse AI Pro costa 39,99 € all'anno (3,33 € al mese) oppure 5,99 € al mese. Con l'annuale i primi 7 giorni sono gratis: se annulli prima della fine della prova non paghi nulla. Senza abbonamento puoi aprire l'app e vedere com'è fatta, ma le funzioni sono bloccate.</p></details>
+    <details><summary>Quanto costa?</summary><p>Nutryse AI Pro costa 39,99 € all'anno (3,33 € al mese) oppure 5,99 € al mese. Con l'annuale i primi 7 giorni sono gratis: se annulli prima della fine della prova non paghi nulla. Se non vuoi abbonarti puoi comprare un pass da 24 ore (0,99 €) o da 7 giorni (2,99 €), che finisce da solo. Senza abbonamento puoi aprire l'app e vedere com'è fatta, ma le funzioni sono bloccate.</p></details>
     <details><summary>È un'app medica?</summary><p>No. Nutryse AI è uno strumento di benessere e non sostituisce il parere di un medico o di un nutrizionista.</p></details>
   </section>
 
