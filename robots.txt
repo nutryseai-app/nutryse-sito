@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nutryseai-app.github.io/nutryse-sito/sitemap.xml
+Sitemap: https://nutryseai.app/sitemap.xml
