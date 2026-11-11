@@ -114,7 +114,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}footer nav a{color:var(--mut
 .shot h3{margin:4px 0 4px;font-size:18px}.shot p{margin:0 auto;color:var(--muted);font-size:15px;max-width:260px}
 @media (max-width:860px){.shots{grid-template-columns:1fr;gap:10px}.shot .phone{height:380px}}
 @media (max-width:860px){
-  .links{display:none}.top .btn{margin-left:auto}
+  .links{display:none}.burger{margin-left:auto}
   .hero{grid-template-columns:1fr;padding-top:40px;text-align:left}
   .phones{height:470px;transform:scale(.86);transform-origin:top center;margin-bottom:-60px}
   .p1{left:calc(50% - 250px)}.p2{right:calc(50% - 250px)}
@@ -124,14 +124,64 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}footer nav a{color:var(--mut
 @media (max-width:420px){.phones{transform:scale(.72);margin-bottom:-140px}}
 .langs{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:10px}
 .langs li{border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:600;font-size:15px}
+
+/* menu a tendina (telefono) e «Assistenza» (computer) */
+.burger{display:none;width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:var(--card);flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0;flex:none}
+.burger span{display:block;width:18px;height:2px;border-radius:2px;background:var(--text);transition:transform .25s,opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.menu{display:flex;flex-direction:column;padding:6px 20px 16px;border-top:1px solid var(--line);background:var(--bg);max-height:calc(100vh - 64px);overflow:auto}
+.menu[hidden]{display:none}
+.menu>a,.menu summary{display:flex;align-items:center;justify-content:space-between;padding:14px 4px;font-size:17px;font-weight:700;color:var(--text);border-bottom:1px solid var(--line);cursor:pointer;list-style:none}
+.menu summary::-webkit-details-marker,.drop summary::-webkit-details-marker{display:none}
+.menu summary::after,.drop summary::after{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin:0 4px 4px 8px;transition:transform .2s;opacity:.7}
+.menu details[open] summary::after,.drop[open] summary::after{transform:rotate(-135deg);margin-bottom:-4px}
+.menu-group a{display:block;padding:12px 4px 12px 16px;font-size:15.5px;font-weight:600;color:var(--muted);border-bottom:1px solid var(--line)}
+.menu-group a:last-child{color:var(--p)}
+.drop{position:relative}
+.drop summary{display:flex;align-items:center;cursor:pointer;color:var(--muted);list-style:none}
+.drop summary:hover,.drop[open] summary{color:var(--text)}
+.drop-panel{position:absolute;right:0;top:calc(100% + 12px);min-width:230px;padding:8px;border-radius:16px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column}
+.drop-panel a{padding:10px 12px;border-radius:10px;color:var(--text);font-weight:600}
+.drop-panel a:hover{background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.drop-panel a:last-child{color:var(--p)}
+@media (max-width:860px){.burger{display:flex}.top .btn{display:none}}
+@media (min-width:861px){.menu{display:none!important}}
 </style></head><body>
 <div class="glow"></div>
 
 <header class="top"><div class="wrap">
   <a class="brand" href="#"><span class="logo"><svg width="24" height="24" viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M12 50C28 27 72 27 88 50C72 73 28 73 12 50Z" stroke-width="7"/><circle cx="50" cy="50" r="17" stroke-width="6.5"/><path d="M43.5 57V43l13 14V43" stroke-width="5.5"/><path d="M76 22C76.7 26.2 77.8 27.3 82 28C77.8 28.7 76.7 29.8 76 34C75.3 29.8 74.2 28.7 70 28C74.2 27.3 75.3 26.2 76 22Z" fill="#fff" stroke="none"/></svg></span>Nutryse AI</a>
-  <nav class="links"><a href="#funzioni">Funzioni</a><a href="#app">L'app</a><a href="#come">Come funziona</a><a href="#piani">Prezzi</a><a href="#faq">Domande</a></nav>
+  <nav class="links"><a href="#funzioni">Funzioni</a><a href="#app">L'app</a><a href="#come">Come funziona</a><a href="#piani">Prezzi</a><a href="#faq">Domande</a>
+    <details class="drop"><summary>Assistenza</summary>
+      <div class="drop-panel">
+        <a href="privacy.html">Informativa privacy</a>
+        <a href="termini.html">Termini e condizioni</a>
+        <a href="mailto:info@nutryseai.app">Scrivi all'assistenza</a>
+        <a href="elimina-account.html">Elimina account</a>
+      </div>
+    </details>
+  </nav>
   <a class="btn" href="#scarica">Scarica l'app</a>
-</div></header>
+  <button class="burger" id="burger" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+</div>
+<nav class="menu" id="menu" hidden>
+  <a href="#funzioni">Funzioni</a>
+  <a href="#app">L'app</a>
+  <a href="#come">Come funziona</a>
+  <a href="#piani">Prezzi</a>
+  <a href="#lingue">Lingue</a>
+  <a href="#faq">Domande frequenti</a>
+  <details class="menu-group">
+    <summary>Privacy e assistenza</summary>
+    <a href="privacy.html">Informativa privacy</a>
+    <a href="termini.html">Termini e condizioni</a>
+    <a href="mailto:info@nutryseai.app">Scrivi all'assistenza</a>
+    <a href="elimina-account.html">Elimina account</a>
+  </details>
+</nav>
+</header>
 
 <main class="wrap">
   <div class="hero">
@@ -347,4 +397,16 @@ footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}footer nav a{color:var(--mut
   <div>© 2026 Nutryse AI · Marco Mingotti · Iseo (BS), Italia</div>
   <nav><a href="privacy.html">Privacy</a><a href="termini.html">Termini</a><a href="elimina-account.html">Elimina account</a><a href="mailto:info@nutryseai.app">Assistenza</a></nav>
 </div></footer>
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  function set(open){m.hidden=!open;b.setAttribute('aria-expanded',open);b.setAttribute('aria-label',open?'Chiudi il menu':'Apri il menu');}
+  b.addEventListener('click',function(e){e.stopPropagation();set(m.hidden);});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+  document.addEventListener('click',function(e){if(!m.hidden&&!m.contains(e.target))set(false);
+    document.querySelectorAll('.drop[open]').forEach(function(d){if(!d.contains(e.target))d.open=false;});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){set(false);document.querySelectorAll('.drop[open]').forEach(function(d){d.open=false;});}});
+  window.addEventListener('resize',function(){if(window.innerWidth>860)set(false);});
+})();
+</script>
 </body></html>
